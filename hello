@@ -3,7 +3,7 @@ def calculate_change(paid,price):
     return price
 snack_price = 75
 print("----------Snack Vending Machine--------")
-print("The Price is 0.75 cents")
+print("The Price is ", snack_price)
 print("Accepted COins: 1, 5, 10, 25")
 total_inserted = 0
 coins_inserted = 0
@@ -14,7 +14,7 @@ while True:
         continue
     total_inserted += coin
     coins_inserted += 1
-    print("Inserted {coin}. total so far: {total_inserted}")
+    print(f"Inserted {coin}. total so far: {total_inserted}")
     if total_inserted >= snack_price:
         print("Enough Money")
         break
@@ -30,4 +30,3 @@ print("coins inserted", coins_inserted)
 print("totla paid:", total_inserted)
 print("change given:", change_due)
 print("thx for ur purchase") 
-    
