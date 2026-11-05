@@ -1,0 +1,41 @@
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    if b == 0:
+        raise ZeroDivisionError("Error: Cannot Divide By Zero ")
+    return a / b
+def calculator():
+    print("Select an operator")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. multiply")
+    print("4.  divide")
+    choice = input("Enter you choice (1/2/3/4)")
+    if not choice not in ['1','2','3','4']:
+        print("Invalid Choice")
+        return
+    try:
+        num1 = float(input("Enter first number:  "))
+        num2 = float(input("Enter second number:  "))
+        if choice == '1':
+            result = add(num1,num2)
+            print("Result: ",result)
+        elif choice == '2':
+            result = subtract(num1,num2)
+            print("Result: ",result)
+        elif choice =='3':
+            result = multiply(num1,num2)
+            print("Result: ",result)
+        elif choice == '4':
+            result = divide(num1,num2)
+            print("Result: ",result)
+    except ValueError:
+        print("Error. There was an invalid input. Please enter numerical numbers.")
+    except ZeroDivisionError:
+        ("Please don't divide numbers by zero. Put another number")
+    
+calculator()
