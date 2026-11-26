@@ -1,0 +1,18 @@
+basket1 = {"oreos", "pringles", "cheetos", "skittles"}
+basket2 = {"pringles", "ritz", "oreos", "crackers"}
+print("Basket One:  ", basket1)
+print("Basket Two:  ", basket2)
+basket1.add("cookies")
+print("Basket 1 after adding cookies:  ",basket1)
+common_snacks = basket1.intersection(basket2)
+print("These snacks are inside both baskets",common_snacks)
+import array as arr
+snack_counts = arr.array('i', [3, 5, 2, 4])
+print("Snacks counts array:  ", snack_counts)
+snack_counts.insert(0, 1)
+snack_counts.append(6)
+print("Snack counts after adding the items:  ",snack_counts)
+count_of_4 = snack_counts.count(4)
+print("Number of times 4 appears:  ",count_of_4)
+snack_counts.reverse()
+print("After reversing snack counts:  ",snack_counts)
